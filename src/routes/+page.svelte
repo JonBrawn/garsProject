@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '$lib/components/Header.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import About from '$lib/components/About.svelte';
 	import Skills from '$lib/components/Skills.svelte';
@@ -54,6 +55,7 @@
 	<meta name="description" content="Garrett Brown - Web Developer Portfolio" />
 </svelte:head>
 
+<Header />
 <main>
 	<Hero />
 	<About />
