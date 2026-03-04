@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:aodisme.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(gh api repos/aodisme/aodisme.github.io/contents/ --jq '.[].name')",
+      "WebFetch(domain:github.com)",
+      "Bash(npx sv create . --template minimal --types ts --no-add-ons --no-install)",
+      "Bash(npm i)",
+      "Bash(npm i -D tailwindcss @tailwindcss/vite @sveltejs/adapter-static motion)",
+      "Bash(npm run build)"
+    ]
+  }
+}

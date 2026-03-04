@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-poppins: 'Poppins', sans-serif;
+
+	--color-bg: #3B2042;
+	--color-bg-secondary: #39254D;
+	--color-bg-tertiary: #101010;
+	--color-text: #f8f0e3;
+	--color-nav-text: #ffffff;
+	--color-accent: #5e2fce;
+	--color-box: #534582;
+	--color-gradient-one: #fd47b7;
+	--color-gradient-two: #5e2fce;
+	--color-header-bg: rgba(0, 0, 0, 0.3);
+	--color-menu-bg: rgba(83, 69, 130, 0.8);
+	--color-hover: #13ce1d;
+	--color-btn-text: #f8f0e3;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-poppins);
+		background-color: var(--color-bg);
+		color: var(--color-text);
+	}
+
+	:root[data-theme='light'] {
+		--color-bg: #e8dff0;
+		--color-bg-secondary: #d9cce6;
+		--color-bg-tertiary: #c4b3d4;
+		--color-text: #1a1025;
+		--color-nav-text: #1a1025;
+		--color-accent: #7b4fbf;
+		--color-box: #d0c2de;
+		--color-gradient-one: #fd47b7;
+		--color-gradient-two: #7b4fbf;
+		--color-header-bg: rgba(100, 60, 140, 0.25);
+		--color-menu-bg: rgba(208, 194, 222, 0.9);
+		--color-hover: #9b5fe0;
+		--color-btn-text: #f8f0e3;
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: var(--color-accent);
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: var(--color-bg-secondary);
+	}
+}
