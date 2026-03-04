@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fly, fade, scale } from 'svelte/transition';
 	import { cubicOut, elasticOut } from 'svelte/easing';
+	import { base } from '$app/paths';
 
 	let visible = $state(false);
 	let typedText = $state('');
@@ -144,7 +145,7 @@
 						<div class="absolute -inset-6 bg-gradient-to-r from-[var(--color-gradient-two)] to-[var(--color-gradient-one)] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
 
 						<img
-							src="/images/image.jpg"
+							src="{base}/images/image.jpg"
 							alt="Garrett Brown"
 							class="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-2 border-white/10 shadow-2xl group-hover:scale-[1.02] transition-transform duration-500"
 						/>

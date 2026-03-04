@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import { base } from '$app/paths';
 
 	const projects = [
-		{ title: 'Project 1', image: '/images/project1.png', tag: 'Web App' },
-		{ title: 'Project 2', image: '/images/project2.png', tag: 'Design' },
-		{ title: 'Project 3', image: '/images/project3.png', tag: 'Frontend' },
-		{ title: 'Project 4', image: '/images/project4.png', tag: 'Full Stack' },
-		{ title: 'Project 5', image: '/images/project5.png', tag: 'UI/UX' },
-		{ title: 'Project 6', image: '/images/project6.png', tag: 'Concept' }
+		{ title: 'Project 1', image: 'images/project1.png', tag: 'Web App' },
+		{ title: 'Project 2', image: 'images/project2.png', tag: 'Design' },
+		{ title: 'Project 3', image: 'images/project3.png', tag: 'Frontend' },
+		{ title: 'Project 4', image: 'images/project4.png', tag: 'Full Stack' },
+		{ title: 'Project 5', image: 'images/project5.png', tag: 'UI/UX' },
+		{ title: 'Project 6', image: 'images/project6.png', tag: 'Concept' }
 	];
 
 	const placeholderDesc = 'A showcase project demonstrating modern web development techniques, responsive design, and clean user interfaces.';
@@ -57,7 +58,7 @@
 						<!-- Image -->
 						<div class="relative aspect-video overflow-hidden bg-[var(--color-box)]">
 							<img
-								src={project.image}
+								src="{base}/{project.image}"
 								alt={project.title}
 								class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
 							/>

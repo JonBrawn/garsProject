@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fly, fade, scale } from 'svelte/transition';
 	import { cubicOut, elasticOut, backOut } from 'svelte/easing';
+	import { base } from '$app/paths';
 
 	let visible = $state(false);
 	let mouseX = $state(0);
@@ -125,7 +126,7 @@
 				<div class="relative" style="transform: translate({mouseX * -5}px, {mouseY * -5}px); transition: transform 0.3s ease-out;">
 					<div class="absolute -inset-1 bg-gradient-to-r from-[var(--color-gradient-two)] via-[var(--color-gradient-one)] to-[var(--color-gradient-two)] rounded-full animate-[spin_4s_linear_infinite] opacity-70 blur-[2px]"></div>
 					<img
-						src="/images/image.jpg"
+						src="{base}/images/image.jpg"
 						alt="Garrett Brown"
 						class="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-[var(--color-bg)]"
 					/>

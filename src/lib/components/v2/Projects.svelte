@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import { base } from '$app/paths';
 
 	const projects = [
-		{ title: 'Project 1', image: '/images/project1.png', tag: 'WEB', desc: 'Modern web application with responsive design and clean architecture.' },
-		{ title: 'Project 2', image: '/images/project2.png', tag: 'UI', desc: 'User interface design focusing on accessibility and visual polish.' },
-		{ title: 'Project 3', image: '/images/project3.png', tag: 'DEV', desc: 'Frontend development with modern frameworks and best practices.' },
-		{ title: 'Project 4', image: '/images/project4.png', tag: 'APP', desc: 'Full-stack application demonstrating end-to-end development.' },
-		{ title: 'Project 5', image: '/images/project5.png', tag: 'UX', desc: 'User experience design with research-driven approach.' },
-		{ title: 'Project 6', image: '/images/project6.png', tag: 'ART', desc: 'Creative concept exploring the intersection of design and code.' }
+		{ title: 'Project 1', image: 'images/project1.png', tag: 'WEB', desc: 'Modern web application with responsive design and clean architecture.' },
+		{ title: 'Project 2', image: 'images/project2.png', tag: 'UI', desc: 'User interface design focusing on accessibility and visual polish.' },
+		{ title: 'Project 3', image: 'images/project3.png', tag: 'DEV', desc: 'Frontend development with modern frameworks and best practices.' },
+		{ title: 'Project 4', image: 'images/project4.png', tag: 'APP', desc: 'Full-stack application demonstrating end-to-end development.' },
+		{ title: 'Project 5', image: 'images/project5.png', tag: 'UX', desc: 'User experience design with research-driven approach.' },
+		{ title: 'Project 6', image: 'images/project6.png', tag: 'ART', desc: 'Creative concept exploring the intersection of design and code.' }
 	];
 
 	let sectionEl: HTMLElement | undefined = $state();
@@ -52,7 +53,7 @@
 						<!-- Image -->
 						<div class="absolute inset-0 bg-[var(--color-box)]">
 							<img
-								src={project.image}
+								src="{base}/{project.image}"
 								alt={project.title}
 								class="w-full h-full object-cover opacity-60 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700"
 							/>

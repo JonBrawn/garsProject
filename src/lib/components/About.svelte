@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fly, scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import { base } from '$app/paths';
 
 	let sectionEl: HTMLElement | undefined = $state();
 	let visible = $state(false);
@@ -33,7 +34,7 @@
 				<div class="relative group">
 					<div class="absolute -inset-1 bg-gradient-to-r from-[var(--color-gradient-two)] to-[var(--color-gradient-one)] rounded-full blur-md opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
 					<img
-						src="images/image.jpg"
+						src="{base}/images/image.jpg"
 						alt="Garrett Brown"
 						class="relative w-52 h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover shadow-[0_0_25px_var(--color-accent)] group-hover:shadow-[0_0_25px_var(--color-accent),0_0_50px_var(--color-accent),0_0_100px_var(--color-accent)] transition-shadow duration-500"
 					/>

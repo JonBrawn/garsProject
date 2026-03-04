@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fly, scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import { base } from '$app/paths';
 
 	const projects = [
 		{ title: 'Project 1', image: 'images/project1.png' },
@@ -54,7 +55,7 @@
 				>
 					<div class="overflow-hidden rounded-2xl">
 						<img
-							src={project.image}
+							src="{base}/{project.image}"
 							alt={project.title}
 							class="max-w-[280px] w-full rounded-2xl group-hover:scale-110 transition-transform duration-500"
 						/>

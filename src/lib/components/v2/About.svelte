@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import { base } from '$app/paths';
 
 	let sectionEl: HTMLElement | undefined = $state();
 	let visible = $state(false);
@@ -53,7 +54,7 @@
 					<div class="relative mb-10">
 						<div class="absolute -inset-4 bg-gradient-to-br from-[var(--color-gradient-two)]/20 to-[var(--color-gradient-one)]/20 rounded-3xl blur-xl"></div>
 						<img
-							src="/images/image.jpg"
+							src="{base}/images/image.jpg"
 							alt="Garrett Brown"
 							class="relative w-full aspect-[4/5] object-cover rounded-3xl border border-white/10"
 						/>
